@@ -35,7 +35,7 @@ class StartResponse:
 
     def response(self, output):
         return {
-            'statusCode': str(self.status),
+            'statusCode': int(self.status),
             'headers': dict(self.headers),
             'body': self.body.getvalue() + ''.join(map(convert_str, output)),
         }
